@@ -1,0 +1,48 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/blog.css' %}">
+    <title>Blog</title>
+</head>
+<body>
+    <header>
+        <h1>Merrybable</h1>
+        {% if user.is_authenticated %}
+            <h2>Hello, {{user.username}}!</h2>
+        {% endif %}
+    </header><hr>
+    <div class="maincontent">
+        <div class="addone">
+            <h1>Add a new post</h1>
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h2>Title</h2>
+                <input class="field" type="text" name="title" id="" placeholder="">
+                <h2>Description</h2>
+                <input class="field" type="text" name="desc" id="" placeholder="">
+                <h2>Image</h2>
+                <input type="file" name="image" id=""><br><br>
+                <input type="submit" name="" id="" value="Add">
+            </form>
+        </div>
+        <div class="blogs">
+            {% for i in blog %}
+                <img src="{{i.image.url}}" alt="" width="100%">
+                <h2>{{i.title}}</h2>
+                <h3>{{i.desc}}</h3><br><hr>
+            {% endfor %}
+        </div>
+        <div class="users">
+            <header>
+                <h2>Who use Merrybable</h2>
+            </header>
+            {% for i in users %}
+                <li><a href="">{{i.username}}</a></li><br>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

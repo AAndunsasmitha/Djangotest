@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div class="head">
+        <h1>AsBlog</h1>
+    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h2>First Name</h2>
+        <input type="text" name="firstname" id="" placeholder="Enter your first name">
+        <h2>Last Name</h2>
+        <input type="text" name="lastname" id="" placeholder="Enter your last name">
+        <h2>Email</h2>
+        <input type="email" name="email" id="" placeholder="Enter your Email ">
+        <h2>Username</h2>
+        <input type="text" name="username" id="" placeholder="Enter your username">
+        <h2>Password</h2>
+        <input type="password" name="password" id="" placeholder="Enter your password">
+        <h2>Confirm Password</h2>
+        <input type="password" name="confirmpassword" id="" placeholder="Confirm your password"><br><br>
+        <input type="submit" name="" id=""><br>
+        <a href="login/"><h3>Already have an account? log in</h3></a>
+    </form>
+    {% for message in messages %}
+        <p>{{message}}</p>
+    {% endfor %}
+</body>
+</html>

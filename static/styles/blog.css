@@ -1,0 +1,56 @@
+body{
+    background-color: black;
+    color: antiquewhite;
+    height: 100%;
+}
+header h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header h2{
+    text-align: center;
+}
+.maincontent{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+}
+.addone{
+    padding: 5px;
+}
+.addone h1{
+    text-align: center
+
+}
+.addone form{
+    border: 1px solid white;
+    padding: 5px;
+}
+.addone form input.field{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+.blogs{
+    border-left: 2px solid wheat;
+    border-right: 2px solid wheat;
+    padding: 10px;
+}
+.users header{
+    text-align: center;
+}
+.users{
+    padding: 10px;
+}
+.users li{
+    list-style: none;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.users li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
